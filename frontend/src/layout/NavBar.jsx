@@ -29,6 +29,7 @@ const NavBar = () => {
     return (
         <div className="flex justify-between items-center bg-gray-900 text-[20px] py-4 px-6 ">
             <div className="flex gap-10">
+                
                 {
                     user && <div 
                         className={`${path === `/profile/${user._id}` || "/profile/edit" ?"bg-gray-950 p-2 rounded-md" : ""} cursor-pointer`}
