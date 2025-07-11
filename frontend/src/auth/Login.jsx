@@ -6,8 +6,8 @@ import { addUser } from "../store/userSlice";
 
 const Login  = () => {
 
-    const [email, setEmail] = useState("akhil@gmail.com");
-    const [password, setPassword] = useState("JobPortal@123");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
     const [errorMessage, setErrorMessage] = useState("");
     const [error, setError] = useState(false);
     const navigate = useNavigate();
@@ -28,12 +28,6 @@ const Login  = () => {
                 setError(true);
                 setErrorMessage(data.message);
             }
-            
-            // createdAt: "2024-10-30T14:12:31.367Z"
-            // email: "srinu@gmail.com"
-            // fullName: "srinu"
-            // updatedAt: "2024-10-30T14:12:31.367Z"
-            // _id:"67223ecf6da519f287d56e45"
 
             console.log("data.data",data.data);
             dispatch(addUser(data.data));

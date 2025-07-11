@@ -41,6 +41,10 @@ const ExploreUsers = () => {
         getUsers();
     },[]);
 
+    if(users.length === 0) {
+        return <h1 className="bg-red-500 p-3 mx-auto rounded-md max-w-[500px] text-center mt-40">No users to show</h1>
+    }
+
     return (
         <div className="flex flex-col mt-4 items-center justify-center">
             {
